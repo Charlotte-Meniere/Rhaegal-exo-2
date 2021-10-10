@@ -1,8 +1,18 @@
 "use script";
-const names = ['Pierre', 'Julie',  'Grégory', 'Grégoire','Appoline', 'Philippa', 'Christophe',
-'Aline'];
+const fullname = ["Pierre", "Julie", "Grégory", "Grégoire", "Appoline", "Philipa", "Christopher", "Aline"];
 
-const includeAP = names.filter((name) => name.includes("p") || name.includes("P"));
 
-console.log(includeAP);
 
+const nameToObjects = () => {
+    const objects = [];
+    
+    for (const element of fullname) {
+      objects.push({firstLetter : element[0],           fullName : element});
+      console.log(objects);
+    }
+
+    return objects;
+
+}
+
+nameToObjects(fullname);
